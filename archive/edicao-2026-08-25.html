@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Barbacast 3D Newsletter</title>
+<meta name="description" content="As 10 notícias mais relevantes da semana no mundo da impressão 3D.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Barbacast 3D Newsletter">
+<meta property="og:description" content="As 10 notícias mais relevantes da semana no mundo da impressão 3D.">
+<meta property="og:image" content="https://barbacast.github.io/barbacast3d-newsletter/og-image.png">
+<meta property="og:url" content="https://barbacast.github.io/barbacast3d-newsletter/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+
+body{margin:0;padding:0;background-color:#0F0F0F;font-family:'Helvetica Neue',Arial,sans-serif;color:#F5F5F5;}
+.wrapper{max-width:640px;margin:0 auto;background-color:#0F0F0F;}
+.header{background-color:#F5C800;padding:24px;text-align:center;}
+.header h1{margin:0;color:#0F0F0F;font-size:26px;letter-spacing:1px;text-transform:uppercase;}
+.header p{margin:6px 0 0;color:#0F0F0F;font-size:13px;font-weight:bold;}
+.header a{color:#0F0F0F;text-decoration:none;font-weight:bold;font-size:13px;}
+button{font-family:inherit;}
+.navlink{cursor:pointer;user-select:none;background:none;border:none;padding:0;font-family:inherit;}
+.header .navlink{color:#0F0F0F;font-weight:bold;font-size:13px;}
+.back.navlink{display:inline-block;margin:24px;color:#F5C800;text-decoration:none;font-size:13px;font-weight:bold;text-align:left;}
+.intro{padding:24px;font-size:15px;line-height:1.6;border-bottom:1px solid #2A2A2A;}
+.intro span{color:#F5C800;font-weight:bold;}
+.story{width:100%;padding:20px 24px;border-bottom:1px solid #2A2A2A;display:flex;gap:16px;align-items:flex-start;text-align:left;background:none;border-left:none;border-right:none;border-top:none;color:inherit;cursor:pointer;}
+.story:hover{background-color:#161616;}
+.story .icon{flex-shrink:0;width:40px;height:40px;background-color:#1A1A1A;border-radius:8px;display:flex;align-items:center;justify-content:center;}
+.story .body{flex:1;}
+.story .tag{display:inline-block;background-color:#F5C800;color:#0F0F0F;font-size:11px;font-weight:bold;text-transform:uppercase;padding:3px 10px;border-radius:3px;margin-bottom:8px;letter-spacing:0.5px;}
+.story h2{margin:0 0 6px;font-size:17px;color:#F5F5F5;}
+.story p{margin:0;font-size:13px;line-height:1.5;color:#AAAAAA;}
+.story .read-more{display:inline-block;margin-top:8px;font-size:12px;color:#F5C800;font-weight:bold;}
+.story-featured{background-color:#1c1706;border-left:3px solid #F5C800;}
+.featured-badge{display:inline-block;background-color:#E8452C;color:#fff;font-size:10px;font-weight:bold;text-transform:uppercase;padding:3px 9px;border-radius:3px;margin-bottom:8px;letter-spacing:0.5px;}
+.footer{padding:28px 24px;text-align:center;font-size:12px;color:#888;}
+.archive-list{margin-top:14px;padding-top:14px;border-top:1px solid #2A2A2A;}
+.archive-list p{margin:0 0 8px;color:#666;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;}
+.archive-list a{color:#F5C800;text-decoration:none;font-size:12px;margin:0 6px;}
+.footer .brand{color:#F5C800;font-weight:bold;font-size:14px;}
+.divider{height:4px;background:repeating-linear-gradient(90deg,#F5C800 0px,#F5C800 12px,#0F0F0F 12px,#0F0F0F 24px);}
+.banner{background:linear-gradient(135deg,#1A1A1A 0%,#0F0F0F 100%);padding:12px 24px 0;text-align:center;border-bottom:2px solid #F5C800;}
+.content{padding:24px;}
+.article-page h1{margin:0 0 18px;font-size:24px;line-height:1.3;color:#F5F5F5;}
+.article-page p{font-size:15px;line-height:1.7;color:#D8D8D8;margin:0 0 16px;}
+.source-box{background-color:#1A1A1A;border-left:3px solid #F5C800;padding:14px 18px;margin-top:24px;font-size:13px;color:#AAAAAA;}
+.source-box a{color:#F5C800;text-decoration:none;font-weight:bold;}
+.back{display:inline-block;margin:24px;color:#F5C800;text-decoration:none;font-size:13px;font-weight:bold;}
+
+/* Cadastro de e-mail */
+.signup-box{margin:20px 24px;padding:22px;background:linear-gradient(135deg,#F5C800 0%,#d9af00 100%);border-radius:10px;}
+.signup-box h3{margin:0 0 6px;font-size:17px;color:#0F0F0F;}
+.signup-box p{margin:0 0 14px;font-size:13px;color:#1a1a1a;}
+.signup-form{display:flex;gap:8px;flex-wrap:wrap;}
+.signup-form input{flex:1;min-width:160px;padding:11px 14px;border-radius:6px;border:none;font-size:14px;background-color:#0F0F0F;color:#F5F5F5;}
+.signup-form input::placeholder{color:#888;}
+.signup-form button{padding:11px 18px;border-radius:6px;border:none;background-color:#0F0F0F;color:#F5C800;font-weight:bold;font-size:14px;cursor:pointer;}
+
+/* Ofertas de afiliados */
+.affiliate-section{margin:8px 24px 20px;padding:20px;background-color:#161616;border-radius:10px;border:1px solid #2A2A2A;}
+.affiliate-header h3{margin:0 0 4px;font-size:17px;color:#F5F5F5;}
+.affiliate-header p{margin:0 0 16px;font-size:12px;color:#888;}
+.offer-grid{display:flex;flex-direction:column;gap:10px;}
+.offer-card{display:block;background-color:#1F1F1F;border-radius:8px;padding:14px 16px;text-decoration:none;border-left:3px solid #F5C800;position:relative;}
+.offer-badge{display:inline-block;background-color:#E8452C;color:#fff;font-size:10px;font-weight:bold;text-transform:uppercase;padding:2px 8px;border-radius:3px;margin-bottom:8px;letter-spacing:0.5px;}
+.offer-name{font-size:14px;color:#F5F5F5;font-weight:bold;margin-bottom:8px;}
+.offer-prices{display:flex;align-items:baseline;gap:8px;margin-bottom:6px;}
+.old-price{font-size:12px;color:#888;text-decoration:line-through;}
+.new-price{font-size:18px;color:#F5C800;font-weight:bold;}
+.discount{font-size:11px;color:#4CD964;font-weight:bold;}
+.offer-cta{font-size:12px;color:#F5C800;font-weight:bold;}
+.offer-empty{font-size:13px;color:#666;font-style:italic;margin:0;padding:12px 0;}
+.inline-offer{display:block;background-color:#1F1F1F;border:1px solid #F5C800;border-radius:8px;padding:12px 16px;margin:0 0 16px;color:#F5C800;text-decoration:none;font-size:14px;font-weight:bold;}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <section id="list-page">
+    <div class="header">
+      <h1>Barbacast 3D</h1>
+      <p>NEWSLETTER SEMANAL · IMPRESSÃO 3D</p>
+    </div>
+    <div class="divider"></div>
+    <div class="intro">
+      <span>E aí, impressor(a)!</span> As 10 notícias mais relevantes da semana no mundo da impressão 3D — de lançamentos de impressoras desktop a aplicações militares, aeroespaciais e curiosidades. Clique em cada uma para ler o resumo completo e acessar a fonte original.
+    </div>
+    
+    
+  <button type="button" class="story" onclick="showArticle('creality-sparkx-i7-nano')">
+    <div class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#F5C800" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v6H6V3zm-2 6h16a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-3v4H7v-4H4a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2zm4 8v4h8v-4H8zm9-5.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg></div>
+    <div class="body">
+      
+      <span class="tag">Lançamento</span>
+      <h2>Creality lança o SPARKX i7 Nano</h2>
+      <p>A Creality ampliou a família i7 com o lançamento do SPARKX i7 Nano, uma impressora desktop que traz impressão …</p>
+      <span class="read-more">Ler matéria completa →</span>
+    </div>
+  </button>
+  <button type="button" class="story" onclick="showArticle('creality-prejuizo-2026')">
+    <div class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#F5C800" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10m6 10V4m6 16v-7m6 7V8"/></svg></div>
+    <div class="body">
+      
+      <span class="tag">Mercado</span>
+      <h2>Creality projeta prejuízo no 1º semestre de 2026</h2>
+      <p>Poucos meses depois de abrir capital na bolsa de Hong Kong, a Creality (HKG: 3388) sinalizou ao mercado que de…</p>
+      <span class="read-more">Ler matéria completa →</span>
+    </div>
+  </button>
+  <button type="button" class="story" onclick="showArticle('hi3d-v3')">
+    <div class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#F5C800" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3a4 4 0 0 0-4 4 4 4 0 0 0-2 7 4 4 0 0 0 4 4h6a4 4 0 0 0 4-4 4 4 0 0 0-2-7 4 4 0 0 0-4-4H9z"/></svg></div>
+    <div class="body">
+      
+      <span class="tag">IA & Modelagem</span>
+      <h2>Hi3D lança V3.0 com resolução recorde</h2>
+      <p>A plataforma Hi3D, uma das ferramentas de geração de modelos 3D por inteligência artificial, lançou a versão 3…</p>
+      <span class="read-more">Ler matéria completa →</span>
+    </div>
+  </button>
+  <button type="button" class="story" onclick="showArticle('firestorm-labs-rimpac')">
+    <div class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#F5C800" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l2-8h14l2 8M3 17a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3M12 3v6"/></svg></div>
+    <div class="body">
+      
+      <span class="tag">Aplicação Real</span>
+      <h2>Impressão 3D em operação naval dos EUA</h2>
+      <p>Durante o exercício militar RIMPAC 2026, a Firestorm Labs produziu mais de 1.000 peças e montou 12 drones FPV …</p>
+      <span class="read-more">Ler matéria completa →</span>
+    </div>
+  </button>
+  <button type="button" class="story" onclick="showArticle('ultimaker-factor-4-plus')">
+    <div class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#F5C800" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4v-4l6 4V6l6 4v11H3z"/></svg></div>
+    <div class="body">
+      
+      <span class="tag">Industrial</span>
+      <h2>UltiMaker apresenta a Factor 4 Plus</h2>
+      <p>A UltiMaker revelou a Factor 4 Plus, uma impressora 3D industrial de alta velocidade com sistema automatizado …</p>
+      <span class="read-more">Ler matéria completa →</span>
+    </div>
+  </button>
+    
+    
+  <button type="button" class="story" onclick="showArticle('prusa-segunda-geracao')">
+    <div class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#F5C800" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm8-3a8 8 0 0 1-.2 1.7l2 1.6-2 3.4-2.4-.9a8 8 0 0 1-1.5.9l-.4 2.6H9.5l-.4-2.6a8 8 0 0 1-1.5-.9l-2.4.9-2-3.4 2-1.6A8 8 0 0 1 5 12a8 8 0 0 1 .2-1.7l-2-1.6 2-3.4 2.4.9a8 8 0 0 1 1.5-.9L9.5 3h5l.4 2.6a8 8 0 0 1 1.5.9l2.4-.9 2 3.4-2 1.6c.1.5.2 1.1.2 1.7z"/></svg></div>
+    <div class="body">
+      
+      <span class="tag">Lançamento</span>
+      <h2>Prusa Research anuncia segunda geração de toda a linha</h2>
+      <p>A Prusa Research anunciou que toda a sua linha atual de impressoras — XL, CORE One e CORE One L — vai receber …</p>
+      <span class="read-more">Ler matéria completa →</span>
+    </div>
+  </button>
+  <button type="button" class="story" onclick="showArticle('atf-ghost-gun')">
+    <div class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#F5C800" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-3 3-6-6 3-3zM3 21l7-7M12 12l-7 7M17 7l3-3"/></svg></div>
+    <div class="body">
+      
+      <span class="tag">Regulação</span>
+      <h2>Juiz federal dos EUA derruba regra da ATF sobre peças de arma impressas em 3D</h2>
+      <p>Um juiz federal nos Estados Unidos derrubou uma regra da ATF (agência que regula armas de fogo no país) que re…</p>
+      <span class="read-more">Ler matéria completa →</span>
+    </div>
+  </button>
+  <button type="button" class="story" onclick="showArticle('othisis-foguete')">
+    <div class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#F5C800" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 2 5 6 5 10 0 2-1 4-2 5l-3 3-3-3c-1-1-2-3-2-5 0-4 2-8 5-10zM8 17l-3 4M16 17l3 4M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/></svg></div>
+    <div class="body">
+      
+      <span class="tag">Aeroespacial</span>
+      <h2>Startup indiana testa motor de foguete 100% impresso em 3D</h2>
+      <p>A Othisis, startup indiana com apenas dois anos de existência, testou com sucesso um motor de foguete totalmen…</p>
+      <span class="read-more">Ler matéria completa →</span>
+    </div>
+  </button>
+  <button type="button" class="story" onclick="showArticle('sovol-m1d')">
+    <div class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#F5C800" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm8-3a8 8 0 0 1-.2 1.7l2 1.6-2 3.4-2.4-.9a8 8 0 0 1-1.5.9l-.4 2.6H9.5l-.4-2.6a8 8 0 0 1-1.5-.9l-2.4.9-2-3.4 2-1.6A8 8 0 0 1 5 12a8 8 0 0 1 .2-1.7l-2-1.6 2-3.4 2.4.9a8 8 0 0 1 1.5-.9L9.5 3h5l.4 2.6a8 8 0 0 1 1.5.9l2.4-.9 2 3.4-2 1.6c.1.5.2 1.1.2 1.7z"/></svg></div>
+    <div class="body">
+      
+      <span class="tag">Open Source</span>
+      <h2>Sovol lança a M1D, primeira IDEX open source com trocador de bicos</h2>
+      <p>A Sovol apresentou a M1D, descrita como a primeira impressora IDEX (bicos duplos e independentes) open source …</p>
+      <span class="read-more">Ler matéria completa →</span>
+    </div>
+  </button>
+  <button type="button" class="story" onclick="showArticle('dinossauro-blenheim')">
+    <div class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#F5C800" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6a2.5 2.5 0 1 0-3.5 3.5L15 22a2.5 2.5 0 1 0 3.5-3.5L6 6zM4 4a2.5 2.5 0 1 0 3.5 3.5M20 20a2.5 2.5 0 1 0-3.5-3.5"/></svg></div>
+    <div class="body">
+      
+      <span class="tag">Curiosidade</span>
+      <h2>Réplica de dinossauro impressa em impressoras desktop é exposta no Palácio de Blenheim</h2>
+      <p>Catorze impressoras 3D desktop trabalharam durante sete semanas para produzir os ossos de uma réplica de dinos…</p>
+      <span class="read-more">Ler matéria completa →</span>
+    </div>
+  </button>
+    
+    <div class="footer">
+      <p class="brand">BARBACAST 3D</p>
+      <p>Dicas de impressão 3D e empreendedorismo, toda semana.</p>
+      <p style="margin-top:6px;color:#555;">Edição de 25 de agosto de 2026</p>
+      
+    </div>
+  </section>
+
+  
+<section id="art-creality-sparkx-i7-nano" class="article-page" style="display:none;">
+  <div class="header"><button type="button" class="navlink headerlink" onclick="showList()">← Barbacast 3D Newsletter</button></div>
+  <div class="banner"><svg viewBox="0 0 200 140" width="100%" height="140" xmlns="http://www.w3.org/2000/svg">
+      <rect x="55" y="70" width="90" height="55" rx="4" fill="#1A1A1A" stroke="#F5C800" stroke-width="2"/>
+      <rect x="65" y="80" width="70" height="30" rx="2" fill="none" stroke="#3A3A3A" stroke-width="1.5"/>
+      <rect x="72" y="88" width="18" height="14" fill="#F5C800"/>
+      <rect x="94" y="88" width="18" height="14" fill="#E8452C"/>
+      <rect x="116" y="88" width="10" height="14" fill="#4C8BF5"/>
+      <circle cx="100" cy="60" r="10" fill="none" stroke="#F5C800" stroke-width="2"/>
+      <line x1="100" y1="60" x2="100" y2="70" stroke="#F5C800" stroke-width="2"/>
+    </svg></div>
+  <div class="content">
+    
+    <span class="tag">Lançamento</span>
+    <h1>Creality lança o SPARKX i7 Nano</h1>
+    <p>A Creality ampliou a família i7 com o lançamento do SPARKX i7 Nano, uma impressora desktop que traz impressão em quatro cores em um chassi mais compacto que o modelo original da linha. A proposta é levar recursos multicolor, antes restritos a máquinas maiores, para uma pegada de mesa menor.</p>
+      <p>O anúncio reforça a estratégia da Creality de segmentar sua linha i7 em diferentes tamanhos e faixas de preço, mantendo o sistema de troca de cor como diferencial competitivo frente a rivais como Bambu Lab e Anycubic.</p>
+      <p>Para quem já roda operações de impressão com múltiplas cores, a Nano surge como opção para escritórios ou bancadas com espaço reduzido, sem abrir mão do recurso que vem se tornando padrão no segmento desktop em 2026.</p>
+    
+    <div class="source-box">
+      Resumo traduzido e adaptado pela Barbacast 3D a partir de reportagem original em inglês.<br>
+      Fonte: <a href="https://3dprintingindustry.com/" target="_blank" rel="noopener">3D Printing Industry</a> — leia a matéria completa no idioma original no link.
+    </div>
+  </div>
+  <button type="button" class="navlink back" onclick="showList()">← Voltar para a newsletter</button>
+  <div class="footer">
+    <p class="brand">BARBACAST 3D</p>
+    <p>Dicas de impressão 3D e empreendedorismo, toda semana.</p>
+  </div>
+</section>
+<section id="art-creality-prejuizo-2026" class="article-page" style="display:none;">
+  <div class="header"><button type="button" class="navlink headerlink" onclick="showList()">← Barbacast 3D Newsletter</button></div>
+  <div class="banner"><svg viewBox="0 0 200 140" width="100%" height="140" xmlns="http://www.w3.org/2000/svg">
+      <line x1="45" y1="120" x2="155" y2="120" stroke="#3A3A3A" stroke-width="2"/>
+      <rect x="55" y="90" width="16" height="30" fill="#F5C800"/>
+      <rect x="80" y="75" width="16" height="45" fill="#F5C800"/>
+      <rect x="105" y="100" width="16" height="20" fill="#E8452C"/>
+      <rect x="130" y="108" width="16" height="12" fill="#E8452C"/>
+      <path d="M60 65 L145 100" stroke="#E8452C" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+      <path d="M145 100 l-10 -3 m10 3 l-3 9" stroke="#E8452C" stroke-width="2" fill="none"/>
+    </svg></div>
+  <div class="content">
+    
+    <span class="tag">Mercado</span>
+    <h1>Creality projeta prejuízo no 1º semestre de 2026</h1>
+    <p>Poucos meses depois de abrir capital na bolsa de Hong Kong, a Creality (HKG: 3388) sinalizou ao mercado que deve fechar o primeiro semestre de 2026 no vermelho. A empresa não detalhou publicamente os motivos exatos, mas o cenário se soma a um período de margens mais apertadas para fabricantes de impressoras desktop.</p>
+      <p>O caso chama atenção porque a Creality é uma das marcas mais populares do segmento hobby, com presença forte também no mercado brasileiro. Um resultado negativo tão perto do IPO pode afetar a confiança de investidores e acelerar movimentos de reposicionamento de portfólio.</p>
+      <p>Fica o alerta para quem depende de estabilidade de fornecedores: vale acompanhar se a pressão financeira vai se refletir em preços, prazos de entrega ou suporte pós-venda nos próximos meses.</p>
+    
+    <div class="source-box">
+      Resumo traduzido e adaptado pela Barbacast 3D a partir de reportagem original em inglês.<br>
+      Fonte: <a href="https://3dprint.com/" target="_blank" rel="noopener">3DPrint.com</a> — leia a matéria completa no idioma original no link.
+    </div>
+  </div>
+  <button type="button" class="navlink back" onclick="showList()">← Voltar para a newsletter</button>
+  <div class="footer">
+    <p class="brand">BARBACAST 3D</p>
+    <p>Dicas de impressão 3D e empreendedorismo, toda semana.</p>
+  </div>
+</section>
+<section id="art-hi3d-v3" class="article-page" style="display:none;">
+  <div class="header"><button type="button" class="navlink headerlink" onclick="showList()">← Barbacast 3D Newsletter</button></div>
+  <div class="banner"><svg viewBox="0 0 200 140" width="100%" height="140" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#F5C800" stroke-width="1.5" fill="none">
+        <path d="M100 45 L130 62 L130 96 L100 113 L70 96 L70 62 Z"/>
+        <path d="M100 45 L100 79 M70 62 L100 79 L130 62 M100 79 L100 113"/>
+      </g>
+      <circle cx="100" cy="79" r="4" fill="#F5C800"/>
+      <path d="M140 55 l4 8 l8 4 l-8 4 l-4 8 l-4 -8 l-8 -4 l8 -4 Z" fill="#F5C800"/>
+    </svg></div>
+  <div class="content">
+    
+    <span class="tag">IA & Modelagem</span>
+    <h1>Hi3D lança V3.0 com resolução recorde</h1>
+    <p>A plataforma Hi3D, uma das ferramentas de geração de modelos 3D por inteligência artificial, lançou a versão 3.0 do seu gerador all-in-one. A grande novidade é a resolução de geometria, que salta de 1536³ para 2048³ voxels — um ganho de mais de duas vezes na densidade de detalhes.</p>
+      <p>Segundo a empresa, a nova versão também eleva a resolução de textura, o que deve se traduzir em modelos com acabamento mais fiel para quem parte de uma imagem ou prompt de texto até chegar a um arquivo pronto para fatiar e imprimir.</p>
+      <p>Para criadores de conteúdo e makers que usam IA generativa como ponto de partida de projetos, esse tipo de salto de resolução reduz a etapa de retrabalho manual no software de modelagem antes da impressão.</p>
+    
+    <div class="source-box">
+      Resumo traduzido e adaptado pela Barbacast 3D a partir de reportagem original em inglês.<br>
+      Fonte: <a href="https://3dprinting.com/news/" target="_blank" rel="noopener">3D Printing News</a> — leia a matéria completa no idioma original no link.
+    </div>
+  </div>
+  <button type="button" class="navlink back" onclick="showList()">← Voltar para a newsletter</button>
+  <div class="footer">
+    <p class="brand">BARBACAST 3D</p>
+    <p>Dicas de impressão 3D e empreendedorismo, toda semana.</p>
+  </div>
+</section>
+<section id="art-firestorm-labs-rimpac" class="article-page" style="display:none;">
+  <div class="header"><button type="button" class="navlink headerlink" onclick="showList()">← Barbacast 3D Newsletter</button></div>
+  <div class="banner"><svg viewBox="0 0 200 140" width="100%" height="140" xmlns="http://www.w3.org/2000/svg">
+      <path d="M45 105 L60 80 L140 80 L155 105 Z" fill="#1A1A1A" stroke="#F5C800" stroke-width="2"/>
+      <line x1="40" y1="105" x2="160" y2="105" stroke="#3A3A3A" stroke-width="2"/>
+      <line x1="100" y1="80" x2="100" y2="50" stroke="#F5C800" stroke-width="2"/>
+      <path d="M100 50 L118 60 L100 66 Z" fill="#F5C800"/>
+      <circle cx="72" cy="93" r="3" fill="#4C8BF5"/>
+      <circle cx="128" cy="93" r="3" fill="#4C8BF5"/>
+    </svg></div>
+  <div class="content">
+    
+    <span class="tag">Aplicação Real</span>
+    <h1>Impressão 3D em operação naval dos EUA</h1>
+    <p>Durante o exercício militar RIMPAC 2026, a Firestorm Labs produziu mais de 1.000 peças e montou 12 drones FPV modelo Squall dentro de uma fábrica containerizada instalada a bordo do navio USS Essex, ao longo de uma travessia de duas semanas.</p>
+      <p>Em paralelo, a Snowbird Technologies também demonstrou a fabricação de componentes em aço inoxidável 316L a bordo do mesmo tipo de operação, como parte de um experimento de manufatura distribuída conduzido junto à Marinha dos EUA.</p>
+      <p>O caso ilustra até onde a manufatura aditiva já chegou: produzir peças funcionais em trânsito, no meio do oceano, sem depender de uma cadeia de suprimentos tradicional — um cenário extremo, mas que mostra o potencial da impressão 3D para operações remotas e emergenciais.</p>
+    
+    <div class="source-box">
+      Resumo traduzido e adaptado pela Barbacast 3D a partir de reportagem original em inglês.<br>
+      Fonte: <a href="https://3dprintingdaily.com/" target="_blank" rel="noopener">3D Printing Daily / 3DPrint.com</a> — leia a matéria completa no idioma original no link.
+    </div>
+  </div>
+  <button type="button" class="navlink back" onclick="showList()">← Voltar para a newsletter</button>
+  <div class="footer">
+    <p class="brand">BARBACAST 3D</p>
+    <p>Dicas de impressão 3D e empreendedorismo, toda semana.</p>
+  </div>
+</section>
+<section id="art-ultimaker-factor-4-plus" class="article-page" style="display:none;">
+  <div class="header"><button type="button" class="navlink headerlink" onclick="showList()">← Barbacast 3D Newsletter</button></div>
+  <div class="banner"><svg viewBox="0 0 200 140" width="100%" height="140" xmlns="http://www.w3.org/2000/svg">
+      <path d="M45 115 L45 75 L70 60 L70 100 Z" fill="#1A1A1A" stroke="#F5C800" stroke-width="2"/>
+      <path d="M70 100 L70 60 L110 60 L110 115 Z" fill="#1A1A1A" stroke="#F5C800" stroke-width="2"/>
+      <path d="M110 115 L110 60 L140 75 L140 115 Z" fill="#1A1A1A" stroke="#F5C800" stroke-width="2"/>
+      <rect x="80" y="80" width="20" height="20" fill="none" stroke="#F5C800" stroke-width="1.5"/>
+      <path d="M85 90 l4 4 l8 -8" stroke="#F5C800" stroke-width="2" fill="none"/>
+    </svg></div>
+  <div class="content">
+    
+    <span class="tag">Industrial</span>
+    <h1>UltiMaker apresenta a Factor 4 Plus</h1>
+    <p>A UltiMaker revelou a Factor 4 Plus, uma impressora 3D industrial de alta velocidade com sistema automatizado de validação de qualidade embutido no próprio equipamento.</p>
+      <p>A proposta é atender fabricantes que precisam de repetibilidade em produção seriada, reduzindo a necessidade de inspeção manual de cada peça impressa — um gargalo comum quando a impressão 3D sai do protótipo único para lotes maiores.</p>
+      <p>É um sinal de para onde o mercado industrial está indo: menos foco em só imprimir mais rápido, e mais foco em garantir que cada peça saia dentro da especificação sem depender de um operador conferindo uma a uma.</p>
+    
+    <div class="source-box">
+      Resumo traduzido e adaptado pela Barbacast 3D a partir de reportagem original em inglês.<br>
+      Fonte: <a href="https://www.designnews.com/3d-printing" target="_blank" rel="noopener">Design News</a> — leia a matéria completa no idioma original no link.
+    </div>
+  </div>
+  <button type="button" class="navlink back" onclick="showList()">← Voltar para a newsletter</button>
+  <div class="footer">
+    <p class="brand">BARBACAST 3D</p>
+    <p>Dicas de impressão 3D e empreendedorismo, toda semana.</p>
+  </div>
+</section>
+<section id="art-prusa-segunda-geracao" class="article-page" style="display:none;">
+  <div class="header"><button type="button" class="navlink headerlink" onclick="showList()">← Barbacast 3D Newsletter</button></div>
+  <div class="banner"><svg viewBox="0 0 200 140" width="100%" height="140" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="85" r="26" fill="none" stroke="#F5C800" stroke-width="2"/>
+      <circle cx="100" cy="85" r="8" fill="#F5C800"/>
+      <g stroke="#F5C800" stroke-width="4">
+        <line x1="100" y1="53" x2="100" y2="61"/>
+        <line x1="100" y1="109" x2="100" y2="117"/>
+        <line x1="68" y1="85" x2="76" y2="85"/>
+        <line x1="124" y1="85" x2="132" y2="85"/>
+      </g>
+      <text x="118" y="55" font-size="18" fill="#F5C800" font-family="Arial" font-weight="bold">+</text>
+    </svg></div>
+  <div class="content">
+    
+    <span class="tag">Lançamento</span>
+    <h1>Prusa Research anuncia segunda geração de toda a linha</h1>
+    <p>A Prusa Research anunciou que toda a sua linha atual de impressoras — XL, CORE One e CORE One L — vai receber uma atualização de segunda geração, identificada com o sufixo '+'. Segundo a empresa, é a primeira vez que ela atualiza a família inteira de uma só vez.</p>
+      <p>Quem já havia feito pedidos das versões anteriores recebe a versão atualizada sem custo adicional, o que reforça o compromisso da marca checa com quem comprou antes do lançamento da revisão.</p>
+      <p>O anúncio acontece pouco depois da polêmica batizada de 'Nozzle Gate', em que compradores da CORE One relataram bicos de aço mais macio que o esperado, com a Bondtech reconhecendo falhas de usinagem. Vale acompanhar se a nova geração também endereça esse problema específico.</p>
+    
+    <div class="source-box">
+      Resumo traduzido e adaptado pela Barbacast 3D a partir de reportagem original em inglês.<br>
+      Fonte: <a href="https://www.tomshardware.com/3d-printing/prusa-research-xl-core-one-and-core-one-l-all-to-receive-second-generation-upgrades-all-new-orders-get-updated-model-for-free" target="_blank" rel="noopener">Tom's Hardware</a> — leia a matéria completa no idioma original no link.
+    </div>
+  </div>
+  <button type="button" class="navlink back" onclick="showList()">← Voltar para a newsletter</button>
+  <div class="footer">
+    <p class="brand">BARBACAST 3D</p>
+    <p>Dicas de impressão 3D e empreendedorismo, toda semana.</p>
+  </div>
+</section>
+<section id="art-atf-ghost-gun" class="article-page" style="display:none;">
+  <div class="header"><button type="button" class="navlink headerlink" onclick="showList()">← Barbacast 3D Newsletter</button></div>
+  <div class="banner"><svg viewBox="0 0 200 140" width="100%" height="140" xmlns="http://www.w3.org/2000/svg">
+      <path d="M60 60 L100 45 L140 60 L140 80 C140 100 122 112 100 118 C78 112 60 100 60 80 Z"
+        fill="none" stroke="#F5C800" stroke-width="2"/>
+      <path d="M88 82 l9 9 l18 -20" stroke="#F5C800" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg></div>
+  <div class="content">
+    
+    <span class="tag">Regulação</span>
+    <h1>Juiz federal dos EUA derruba regra da ATF sobre peças de arma impressas em 3D</h1>
+    <p>Um juiz federal nos Estados Unidos derrubou uma regra da ATF (agência que regula armas de fogo no país) que restringia a fabricação de peças de armas por impressão 3D, classificadas como 'ghost guns'. A decisão argumenta que a restrição viola a Quinta Emenda da Constituição americana e a tradição histórica da armaria caseira (DIY gunsmithing).</p>
+      <p>O caso reacende um debate antigo no universo maker: até onde vai a liberdade de fabricar objetos em casa quando o resultado é uma peça regulada, como um componente de arma de fogo. A decisão é válida apenas nos EUA, mas costuma influenciar discussões regulatórias em outros países.</p>
+      <p>Vale registrar: esta notícia é puramente informativa sobre uma decisão judicial americana. Não é uma recomendação nem um guia para fabricação de armas — a legislação brasileira sobre o tema é bem mais restritiva e segue vigente independentemente dessa decisão nos EUA.</p>
+    
+    <div class="source-box">
+      Resumo traduzido e adaptado pela Barbacast 3D a partir de reportagem original em inglês.<br>
+      Fonte: <a href="https://www.tomshardware.com/3d-printing/federal-judge-strikes-down-atf-ghost-gun-rule-for-3d-printed-parts-says-restrictions-violate-fifth-amendment-and-historical-tradition-of-diy-gunsmithing" target="_blank" rel="noopener">Tom's Hardware</a> — leia a matéria completa no idioma original no link.
+    </div>
+  </div>
+  <button type="button" class="navlink back" onclick="showList()">← Voltar para a newsletter</button>
+  <div class="footer">
+    <p class="brand">BARBACAST 3D</p>
+    <p>Dicas de impressão 3D e empreendedorismo, toda semana.</p>
+  </div>
+</section>
+<section id="art-othisis-foguete" class="article-page" style="display:none;">
+  <div class="header"><button type="button" class="navlink headerlink" onclick="showList()">← Barbacast 3D Newsletter</button></div>
+  <div class="banner"><svg viewBox="0 0 200 140" width="100%" height="140" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 45 C112 60 116 82 112 105 L88 105 C84 82 88 60 100 45 Z" fill="#1A1A1A" stroke="#F5C800" stroke-width="2"/>
+      <path d="M88 95 L72 112 L88 108 Z" fill="#F5C800"/>
+      <path d="M112 95 L128 112 L112 108 Z" fill="#F5C800"/>
+      <circle cx="100" cy="70" r="6" fill="none" stroke="#F5C800" stroke-width="1.5"/>
+      <path d="M92 105 Q100 125 108 105" stroke="#E8452C" stroke-width="2.5" fill="none"/>
+    </svg></div>
+  <div class="content">
+    
+    <span class="tag">Aeroespacial</span>
+    <h1>Startup indiana testa motor de foguete 100% impresso em 3D</h1>
+    <p>A Othisis, startup indiana com apenas dois anos de existência, testou com sucesso um motor de foguete totalmente impresso em 3D, criogênico e projetado para ser reutilizável. O protótipo foi construído usando impressão SLM (fusão seletiva a laser) em metal.</p>
+      <p>O feito coloca a empresa em um grupo pequeno de players — a maioria de países com programas espaciais consolidados — capazes de validar motores de foguete fabricados quase inteiramente por manufatura aditiva.</p>
+      <p>É um bom lembrete de como a impressão 3D em metal amadureceu: peças que antes exigiam fundição e usinagem complexas hoje saem direto da impressora, reduzindo tempo de desenvolvimento de componentes críticos como câmaras de combustão.</p>
+    
+    <div class="source-box">
+      Resumo traduzido e adaptado pela Barbacast 3D a partir de reportagem original em inglês.<br>
+      Fonte: <a href="https://www.tomshardware.com/3d-printing/othisis-test-fires-3d-printed-fully-cryogenic-reusable-rocket-engine-indian-startup-leverages-slm-printing-to-create-its-first-working-prototype" target="_blank" rel="noopener">Tom's Hardware</a> — leia a matéria completa no idioma original no link.
+    </div>
+  </div>
+  <button type="button" class="navlink back" onclick="showList()">← Voltar para a newsletter</button>
+  <div class="footer">
+    <p class="brand">BARBACAST 3D</p>
+    <p>Dicas de impressão 3D e empreendedorismo, toda semana.</p>
+  </div>
+</section>
+<section id="art-sovol-m1d" class="article-page" style="display:none;">
+  <div class="header"><button type="button" class="navlink headerlink" onclick="showList()">← Barbacast 3D Newsletter</button></div>
+  <div class="banner"><svg viewBox="0 0 200 140" width="100%" height="140" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="82" r="28" fill="none" stroke="#3A3A3A" stroke-width="1.5" stroke-dasharray="3 4"/>
+      <g stroke="#F5C800" stroke-width="2.5" stroke-linecap="round">
+        <line x1="100" y1="82" x2="100" y2="58"/>
+        <line x1="100" y1="82" x2="118" y2="70"/>
+        <line x1="100" y1="82" x2="122" y2="90"/>
+        <line x1="100" y1="82" x2="110" y2="106"/>
+        <line x1="100" y1="82" x2="90" y2="106"/>
+        <line x1="100" y1="82" x2="78" y2="90"/>
+        <line x1="100" y1="82" x2="82" y2="70"/>
+      </g>
+      <circle cx="100" cy="82" r="6" fill="#F5C800"/>
+    </svg></div>
+  <div class="content">
+    
+    <span class="tag">Open Source</span>
+    <h1>Sovol lança a M1D, primeira IDEX open source com trocador de bicos</h1>
+    <p>A Sovol apresentou a M1D, descrita como a primeira impressora IDEX (bicos duplos e independentes) open source com um trocador de ferramentas integrado. O sistema comporta até sete cabeças de impressão, com troca de material em cerca de cinco segundos.</p>
+      <p>A combinação de dois bicos totalmente independentes com troca rápida de ferramenta mira reduzir o desperdício de filamento em impressões multicor — um dos principais incômodos de quem já usa sistemas de troca de cor tradicionais.</p>
+      <p>Por ser open source, a M1D também deve atrair a comunidade de makers que gosta de modificar e expandir hardware, algo raro em impressoras com sistema de tool-changer, geralmente fechado nas marcas concorrentes.</p>
+    
+    <div class="source-box">
+      Resumo traduzido e adaptado pela Barbacast 3D a partir de reportagem original em inglês.<br>
+      Fonte: <a href="https://www.tomshardware.com/3d-printing/sovol-m1d-3d-printer-is-the-first-open-source-idex-design-with-an-integrated-tool-changer-seven-heads-for-quick-swapping-materials-with-two-fully-independent-nozzles" target="_blank" rel="noopener">Tom's Hardware</a> — leia a matéria completa no idioma original no link.
+    </div>
+  </div>
+  <button type="button" class="navlink back" onclick="showList()">← Voltar para a newsletter</button>
+  <div class="footer">
+    <p class="brand">BARBACAST 3D</p>
+    <p>Dicas de impressão 3D e empreendedorismo, toda semana.</p>
+  </div>
+</section>
+<section id="art-dinossauro-blenheim" class="article-page" style="display:none;">
+  <div class="header"><button type="button" class="navlink headerlink" onclick="showList()">← Barbacast 3D Newsletter</button></div>
+  <div class="banner"><svg viewBox="0 0 200 140" width="100%" height="140" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#F5C800" stroke-width="2.5" stroke-linecap="round">
+        <path d="M55 100 Q75 70 100 78 Q120 84 100 95 Q85 102 95 108"/>
+        <path d="M100 95 Q120 90 140 100 Q150 104 145 112"/>
+        <line x1="70" y1="90" x2="70" y2="80"/>
+        <line x1="82" y1="85" x2="82" y2="73"/>
+        <line x1="94" y1="83" x2="94" y2="71"/>
+        <line x1="106" y1="88" x2="106" y2="76"/>
+        <line x1="118" y1="93" x2="118" y2="81"/>
+      </g>
+    </svg></div>
+  <div class="content">
+    
+    <span class="tag">Curiosidade</span>
+    <h1>Réplica de dinossauro impressa em impressoras desktop é exposta no Palácio de Blenheim</h1>
+    <p>Catorze impressoras 3D desktop trabalharam durante sete semanas para produzir os ossos de uma réplica de dinossauro que viveu há cerca de 166 milhões de anos. O resultado está agora em exibição no Palácio de Blenheim, no Reino Unido.</p>
+      <p>O projeto mostra como equipamentos de mesa, os mesmos usados por hobbistas, conseguem ser escalados para produzir peças grandes e complexas quando organizados em uma pequena 'fazenda de impressão' rodando em paralelo.</p>
+      <p>É um ótimo case pra quem quer mostrar pro público leigo que impressora desktop não serve só pra miniatura: com planejamento e paciência, dá pra chegar em peças de museu.</p>
+    
+    <div class="source-box">
+      Resumo traduzido e adaptado pela Barbacast 3D a partir de reportagem original em inglês.<br>
+      Fonte: <a href="https://3dprint.com/" target="_blank" rel="noopener">3DPrint.com</a> — leia a matéria completa no idioma original no link.
+    </div>
+  </div>
+  <button type="button" class="navlink back" onclick="showList()">← Voltar para a newsletter</button>
+  <div class="footer">
+    <p class="brand">BARBACAST 3D</p>
+    <p>Dicas de impressão 3D e empreendedorismo, toda semana.</p>
+  </div>
+</section>
+
+</div>
+<script>
+function showArticle(id) {
+  document.getElementById('list-page').style.display = 'none';
+  document.querySelectorAll('.article-page').forEach(function(el) { el.style.display = 'none'; });
+  document.getElementById('art-' + id).style.display = 'block';
+  window.scrollTo(0, 0);
+}
+function showList() {
+  document.querySelectorAll('.article-page').forEach(function(el) { el.style.display = 'none'; });
+  document.getElementById('list-page').style.display = 'block';
+  window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
